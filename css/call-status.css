@@ -1,0 +1,134 @@
+.call-list{
+    padding: 30px 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.call-list-container{
+    flex-wrap: wrap;
+}
+
+.call-list-item{
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.call-list-item:hover{
+    background-color: rgba(99, 99, 99, 0.1);
+    box-shadow: 0px 10px 30px rgba(17, 38, 146, 0.05);
+}
+
+
+.call-list-item:first-of-type{
+    background-color: rgba(99, 99, 99, 0.1);
+    box-shadow: 0px 10px 30px rgba(17, 38, 146, 0.05);
+    margin-left: 10px;
+}
+.call-list-item{
+    width: 250px;
+    border-radius: 8px;
+}
+
+.call-content{
+    padding: 20px 10px;
+}
+
+.call-text p{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.function-container{
+    margin-left: 10px;
+}
+
+
+.function-filter{
+    background-color: #FFFFFF !important;
+    border-color: white;
+    border-radius: 8px;
+    padding: 3px 10px;
+    outline: none;
+    box-shadow: none;
+}
+.function-filter a, 
+.function-filter i{
+    font-size: 16px;
+    line-height: 19px;
+    color: #C4C4C4;
+    transition: all .5s ;
+}
+.function-filter a{
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.function-filter:hover i,
+.function-filter:hover a{
+    color: black;
+}
+
+.function-search{
+    position: relative;
+}
+.function-search i{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+}
+.function-search input{
+    width: 310px;
+}
+
+.function-search .form-control{
+    background: #FFFFFF;
+    border: 1px solid #CECECE;
+    border-radius: 40px;
+    font-family: 'Numans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.function-search i{
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1100px) {
+    .call-list-item:last-child{
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .call-list-container{
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .call-list-item:nth-child(2){
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+
+
+@media screen and (max-width: 767.98px) {
+    .function-container{
+        flex-wrap: wrap;
+    }
+    .function-search{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .function-search input{
+        width: 250px;
+    }
+}
+

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Telesale</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- ggFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Numans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/call-status.css" />
+    <link rel="stylesheet" href="./css/call-rating.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- HEADER LEFT  -->
+      <header id="header">
+        <div class="header-left">
+          <div class="header-title">
+            <h3>Admin</h3>
+            <div class="header-zoom text-right mr-1">
+              <button class="btn btn-outline-light" id="btn-header-zoom">
+                <i class="fa fa-angle-double-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="header-list">
+            <div class="header-item active">
+              <i class="fa fa-users"></i>
+              <p>Danh sách khách hàng</p>
+              <p>⋮</p>
+            </div>
+            <div class="header-item">
+              <i class="fa fa-user"></i>
+              <p>Danh sách nhân viên</p>
+            </div>
+            <div class="header-item">
+              <i class="fa-solid fa-user-gear"></i>
+              <p>Danh sách tài khoản</p>
+            </div>
+            <div class="header-item">
+              <i class="fa-sharp fa-solid fa-chart-simple"></i>
+              <p>Thống kê báo cáo</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- NAV-BAR  -->
+      <nav>
+        <div
+          class="nav-user d-flex justify-content-between align-items-center px-2"
+        >
+          <div class="nav-user-wellcom">
+            Chào ,<span class="text-danger">User Name</span>
+          </div>
+          <div class="hamburger-bar">
+            <button class="btn btn-outline-none" id="btn-nav-hamburger">
+              <span class="open" href="">☰</span>
+            </button>
+
+            <div class="hamburger-bar-moblie">
+              <div class="nav-user-account-mobile my-3">
+                <div class="nav-user-img-mobile">
+                  <img
+                    class="img-fluid"
+                    src="./img/fake-user.png"
+                    alt="user-image"
+                  />
+                </div>
+                <div class="nav-user-name-mobile text-center mt-1">
+                  userName
+                </div>
+              </div>
+              <div
+                class="nav-user-contact-mobile text-center d-flex justify-content-center"
+              >
+                <a href="tel: 098102395"
+                  ><i class="fa-solid fa-phone-volume phone-volume"></i> :
+                  098102395</a
+                >
+                <span class="mx-3"></span>
+                <a href="mailto: abc@gmail.com"
+                  ><i class="fa-regular fa-bell"></i> abc@gmail.com</a
+                >
+              </div>
+              <div class="nav-user-status-moblie mt-4">
+                <select name="" id="" class="form-control">
+                  <option class="mb-2" value="Option1">Trạng thái</option>
+                  <option class="mb-2" value="Option2">Option2</option>
+                  <option class="mb-2" value="Option3">Option3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="nav-user-status d-flex align-items-center">
+            <select name="" id="" class="form-control">
+              <option class="mb-2" value="Option1">Trạng thái</option>
+              <option class="mb-2" value="Option2">Option2</option>
+              <option class="mb-2" value="Option3">Option3</option>
+            </select>
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-phone-volume phone-volume"></i>
+          </div>
+          <div class="nav-user-account">
+            <div class="nav-user-img">
+              <img
+                class="img-fluid"
+                src="./img/fake-user.png"
+                alt="user-image"
+              />
+            </div>
+            <div class="nav-user-name">userName</div>
+          </div>
+        </div>
+      </nav>
+      <!-- BODY -->
+      <section class="list-body">
+        <!-- Show Custumer -->
+        <article class="d-flex show-custumer">
+          <div class="list-of-custumer active">
+            <p>Danh sách khách hàng tổng</p>
+          </div>
+          <div class="custumer-status">
+            <p>Tình trạng cuộc gọi</p>
+          </div>
+        </article>
+        <!-- Function Of ADMIN  -->
+        <article class="call-list">
+          <div class="call-list-container d-flex justify-content-between">
+            <div class="call-list-item">
+              <div class="call-content d-flex align-items-center">
+                <div class="call-img">
+                  <img class="img-fluid" src="./img/Group 386.png" alt="" />
+                </div>
+                <div class="call-text">
+                  <p>Danh sách chưa gọi</p>
+                </div>
+              </div>
+            </div>
+            <div class="call-list-item">
+              <div class="call-content d-flex align-items-center">
+                <div class="call-img">
+                  <img
+                    class="img-fluid"
+                    src="./img/bxs_phone-call.png"
+                    alt=""
+                  />
+                </div>
+                <div class="call-text">
+                  <p>Danh sách đã gọi</p>
+                </div>
+              </div>
+            </div>
+            <div class="call-list-item">
+              <div class="call-content d-flex align-items-center">
+                <div class="call-img">
+                  <img class="img-fluid" src="./img/Mask group.png" alt="" />
+                </div>
+                <div class="call-text">
+                  <p>Danh sách đang gọi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="call-list-function pt-5">
+            <div class="function-container d-flex justify-content-between">
+              <div class="function-filter">
+                <div class="function-filter">
+                  <i class="fa-solid fa-filter"></i>
+                  <a href="#">Lọc</a>
+                </div>
+              </div>
+              <div class="function-search">
+                <input
+                  type="text"
+                  class="form-control input-search"
+                  placeholder="Tìm kiếm..................."
+                />
+                <i class="fa fa-search"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- List Of custumer -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" /> Tên/ Gmail
+                <i class="fa fa-arrow-down"></i>
+              </th>
+              <th>Địa chỉ <i class="fa fa-arrow-down"></i></th>
+              <th>Số điện thoại <i class="fa fa-arrow-down"></i></th>
+              <th>Khu vực <i class="fa fa-arrow-down"></i></th>
+              <th>Nhóm quản lý <i class="fa fa-arrow-down"></i></th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyCustumer">
+            <tr>
+              <td data-lable="Tên/ Gmail" class="">
+                <div class="custumer-profile d-flex">
+                  <input type="checkbox" />
+                  <div class="custumer-profile-img">
+                    <img class="img-fluid" src="./img/fake-user.png" alt="" />
+                  </div>
+                  <div class="custumer-profile-name">
+                    <p>Nguyễn Văn A</p>
+                    <p>mothaiba@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td data-lable="Địa chỉ">
+                <p>146/15, Đường số 8 Phường 11, Gò Vấp, HCM</p>
+              </td>
+              <td data-lable="Số điện thoại "><p>0915621xxx</p></td>
+              <td data-lable="Khu vực "><p>Miền Nam</p></td>
+              <td data-lable="Nhóm quản lý ">
+                <p>Nhóm A</p>
+              </td>
+              <td data-lable="Trạng thái">
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-trash-alt mr-3 text-danger"></i>
+                </button>
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-pencil-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td data-lable="Tên/ Gmail" class="">
+                <div class="custumer-profile d-flex">
+                  <input type="checkbox" />
+                  <div class="custumer-profile-img">
+                    <img class="img-fluid" src="./img/fake-user.png" alt="" />
+                  </div>
+                  <div class="custumer-profile-name">
+                    <p>Nguyễn Văn A</p>
+                    <p>mothaiba@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td data-lable="Địa chỉ">
+                <p>146/15, Đường số 8 Phường 11, Gò Vấp, HCM</p>
+              </td>
+              <td data-lable="Số điện thoại"><p>0915621xxx</p></td>
+              <td data-lable="Khu vực"><p>Miền Nam</p></td>
+              <td data-lable="Nhóm quản lý">
+                <p>Nhóm A</p>
+              </td>
+              <td data-lable="Trạng thái">
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-trash-alt mr-3 text-danger"></i>
+                </button>
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-pencil-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td data-lable="Tên/ Gmail" class="">
+                <div class="custumer-profile d-flex">
+                  <input type="checkbox" />
+                  <div class="custumer-profile-img">
+                    <img class="img-fluid" src="./img/fake-user.png" alt="" />
+                  </div>
+                  <div class="custumer-profile-name">
+                    <p>Nguyễn Văn A</p>
+                    <p>mothaiba@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td data-lable="Địa chỉ">
+                <p>146/15, Đường số 8 Phường 11, Gò Vấp, HCM</p>
+              </td>
+              <td data-lable="Số điện thoại"><p>0915621xxx</p></td>
+              <td data-lable="Khu vực"><p>Miền Nam</p></td>
+              <td data-lable="Nhóm quản lý">
+                <p>Nhóm A</p>
+              </td>
+              <td data-lable="Trạng thái">
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-trash-alt mr-3 text-danger"></i>
+                </button>
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-pencil-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td data-lable="Tên/ Gmail" class="">
+                <div class="custumer-profile d-flex">
+                  <input type="checkbox" />
+                  <div class="custumer-profile-img">
+                    <img class="img-fluid" src="./img/fake-user.png" alt="" />
+                  </div>
+                  <div class="custumer-profile-name">
+                    <p>Nguyễn Văn A</p>
+                    <p>mothaiba@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td data-lable="Địa chỉ">
+                <p>146/15, Đường số 8 Phường 11, Gò Vấp, HCM</p>
+              </td>
+              <td data-lable="Số điện thoại"><p>0915621xxx</p></td>
+              <td data-lable="Khu vực"><p>Miền Nam</p></td>
+              <td data-lable="Nhóm quản lý">
+                <p>Nhóm A</p>
+              </td>
+              <td data-lable="Trạng thái">
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-trash-alt mr-3 text-danger"></i>
+                </button>
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-pencil-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td data-lable="Tên/ Gmail" class="">
+                <div class="custumer-profile d-flex">
+                  <input type="checkbox" />
+                  <div class="custumer-profile-img">
+                    <img class="img-fluid" src="./img/fake-user.png" alt="" />
+                  </div>
+                  <div class="custumer-profile-name">
+                    <p>Nguyễn Văn A</p>
+                    <p>mothaiba@gmail.com</p>
+                  </div>
+                </div>
+              </td>
+              <td data-lable="Địa chỉ">
+                <p>146/15, Đường số 8 Phường 11, Gò Vấp, HCM</p>
+              </td>
+              <td data-lable="Số điện thoại"><p>0915621xxx</p></td>
+              <td data-lable="Khu vực"><p>Miền Nam</p></td>
+              <td data-lable="Nhóm quản lý">
+                <p>Nhóm A</p>
+              </td>
+              <td data-lable="Trạng thái">
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-trash-alt mr-3 text-danger"></i>
+                </button>
+                <button class="btn btn-outline-none">
+                  <i class="fa fa-pencil-alt"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+          <table class="table-footer">
+            <thead>
+              <tr>
+                <th class="d-flex justify-content-between align-items-center">
+                  <div class="btn-left">
+                    <button class="btn btn-outline-dark">
+                      <i class="fa-solid fa-arrow-left"></i> Trước
+                    </button>
+                  </div>
+                  <div class="show-page text-dark">page ... of ...</div>
+                  <div class="btn-right">
+                    <button class="btn btn-outline-dark">
+                      Sau <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </table>
+      </section>
+      <div class="call-rating">
+        <div class="call-rating-container p-4">
+          <div class="call-header d-flex justify-content-between">
+            <div class="call-header-text">
+              <p>Đánh giá cuộc gọi</p>
+            </div>
+            <div class="call-header-close" id="close-popup">
+              <i class="fa fa-times"></i>
+            </div>
+          </div>
+          <div class="call-rating-profile">
+            <div class="row mt-3 ml-2">
+              <div class="col-6">Tên:</div>
+              <div class="col-6">Nguyễn Văn A</div>
+            </div>
+            <div class="row mt-3 ml-2">
+              <div class="col-6">SĐT:</div>
+              <div class="col-6">03539xxxxx</div>
+            </div>
+            <div class="row mt-3 ml-2">
+              <div class="col-6">Trạng thái cuộc gọi:</div>
+              <div class="col-6">Thành công</div>
+            </div>
+            <div class="row mt-3 ml-2">
+              <div class="col-6">Người gọi</div>
+              <div class="col-6">Nguyễn Thị B</div>
+            </div>
+            <div class="row mt-3 ml-2">
+              <div class="col-6">Tổng thời gian cuộc gọi</div>
+              <div class="col-6">200s</div>
+            </div>
+          </div>
+          <div class="call-rating-feedback">
+            <div class="call-rating-title">
+              <p>Feedback</p>
+            </div>
+            <div class="call-rating-reason">
+              <ul class="first-reason">
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="">Khách đã gọi tư vấn, hẹn lại sau</a>
+                  <i class="fa fa-angle-down"></i>
+                </li>
+              </ul>
+              <ul class="another-reason">
+                <li><a href="#">Khách hàng từ chối gặp</a></li>
+                <li class='active'><a href="#">Khách hàng đã gặp,đang cân nhắc</a></li>
+                <li><a href="#">Khách hàng báo không có tiền tham gia</a></li>
+                <li><a href="#">Khách hàng hẹn lại cuộc gọi sau</a></li>
+                <li><a href="#">Khách hàng không hẹn</a></li>
+                <li><a href="#">Số điện thoại thuê bao</a></li>
+                <li>
+                  <a href="#">Khách không nghe máy, từ chối nghe, máy bận</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector("#close-popup").onclick = function () {
+        document
+          .querySelector(".call-rating")
+          .classList.toggle("active");
+      };
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

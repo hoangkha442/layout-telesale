@@ -1,0 +1,135 @@
+.call-rating{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 12200;
+    background-color: white;
+    width: 570px;
+    height: 720px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.call-header{
+    margin-bottom: 22px;
+}
+.call-header-text p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000000;
+}
+
+.call-header-close{
+    cursor: pointer;
+}
+
+.call-header-close i{
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 100rem;
+    border: 5px solid black;
+    text-align: center;
+    font-size: 26px;
+}
+.call-rating-title{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 54px;
+    margin-bottom: 7px;
+}
+
+.call-rating-title p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #000000;
+}
+
+.first-reason{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.first-reason li{
+    padding: 15px 10px 12px 35px;
+    background-color: #FFFEFE;
+    border: 1px solid #C2BEBE;
+    border-radius: 10px;
+}
+
+.first-reason li a{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #B5B5B5;
+}
+
+.another-reason{
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.another-reason li{
+    padding: 10px 5px 7px 25px;
+    background-color: #FFFEFE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2px;
+}
+
+.another-reason li a{
+    color: #9F9F9F;
+    font-family: 'Numans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.another-reason::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: #FFFFFF;
+    border: 1px solid #C2BBBB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 5px 0px 0px;
+}
+.another-reason .active{
+    position: relative;
+}
+.another-reason .active::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    border: 1px solid #C2BBBB;
+    background-color: #C2BBBB;
+    z-index: 132123;
+}
+
+.call-rating.active{
+    display: none;
+}
+
+@media screen and (max-width: 576.98px) {
+    .call-rating{
+        width: 350px;
+        height: 900px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .call-rating{
+        width: 300px;
+        height: 950px;
+    }
+}
